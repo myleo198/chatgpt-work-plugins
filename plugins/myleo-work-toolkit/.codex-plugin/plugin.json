@@ -1,0 +1,21 @@
+{
+  "name": "myleo-work-toolkit",
+  "version": "0.1.0",
+  "description": "A single skills-only plugin for research, code analysis, knowledge systems, procedural 3D reconstruction, and secure MCP operations.",
+  "author": {"name": "myleo198", "url": "https://github.com/myleo198"},
+  "homepage": "https://github.com/myleo198/chatgpt-work-plugins",
+  "repository": "https://github.com/myleo198/chatgpt-work-plugins",
+  "license": "Apache-2.0",
+  "keywords": ["skills", "research", "code", "threejs", "mcp", "knowledge"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "myleo198 Work Toolkit",
+    "shortDescription": "Personal toolkit for research, code, 3D, wiki, and MCP workflows",
+    "longDescription": "One skills-only plugin combining Firecrawl, OpenWiki, Ponytail, TencentDB Agent Memory, Ix, img2threejs, and Aki MCP operational workflows. External services remain opt-in and must be configured separately.",
+    "developerName": "myleo198",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write", "Local execution", "Network"],
+    "websiteURL": "https://github.com/myleo198/chatgpt-work-plugins",
+    "defaultPrompt": ["Use the appropriate toolkit skill to analyze this project.", "Rebuild this reference image as a procedural Three.js model.", "Plan a source-backed research workflow for this topic."]
+  }
+}

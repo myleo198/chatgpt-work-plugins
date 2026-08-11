@@ -18,6 +18,7 @@ Open `/plugins`, select **myleo198 ChatGPT Work Plugins**, then install the plug
 - `tencentdb-agent-memory-work`: deploy and operate TencentDB Agent Memory workflows.
 - `ix-work`: map and query code structure with the Ix CLI and persistent graph.
 - `img2threejs-work`: rebuild reference images as quality-gated, editable procedural Three.js models.
+- `myleo-work-toolkit`: one skills-only bundle containing the supported workflows for later ChatGPT Web submission.
 - `aki-mcp-work`: run the Aki OAuth-protected remote MCP server for local files and allowlisted shell access. See the [Windows HTTPS deployment guide](plugins/aki-mcp-work/skills/aki-mcp-work/references/https-deployment-windows.md).
 
 See [PROVENANCE.md](PROVENANCE.md) for pinned revisions and licenses.

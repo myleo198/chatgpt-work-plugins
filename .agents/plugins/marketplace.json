@@ -45,6 +45,12 @@
       "category": "Productivity"
     },
     {
+      "name": "myleo-work-toolkit",
+      "source": {"source": "local", "path": "./plugins/myleo-work-toolkit"},
+      "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
+      "category": "Productivity"
+    },
+    {
       "name": "aki-mcp-work",
       "source": {"source": "local", "path": "./plugins/aki-mcp-work"},
       "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
