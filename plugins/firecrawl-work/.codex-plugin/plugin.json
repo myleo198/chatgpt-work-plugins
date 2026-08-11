@@ -1,0 +1,21 @@
+{
+  "name": "firecrawl-work",
+  "version": "0.1.0",
+  "description": "Use Firecrawl for source-backed web search, scrape, crawl, map, and structured extraction workflows.",
+  "author": {"name": "myleo198", "url": "https://github.com/myleo198"},
+  "homepage": "https://github.com/firecrawl/firecrawl",
+  "repository": "https://github.com/myleo198/chatgpt-work-plugins",
+  "license": "AGPL-3.0",
+  "keywords": ["firecrawl", "scrape", "crawl", "search", "research"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Firecrawl Work",
+    "shortDescription": "Search, scrape, crawl, and extract web content",
+    "longDescription": "Plan and execute Firecrawl workflows with explicit source URLs, bounded crawling, structured extraction, and verified outputs.",
+    "developerName": "myleo198",
+    "category": "Productivity",
+    "capabilities": ["Read", "Network"],
+    "websiteURL": "https://github.com/firecrawl/firecrawl",
+    "defaultPrompt": ["Use Firecrawl to research this topic with traceable sources.", "Scrape this page into clean Markdown."]
+  }
+}

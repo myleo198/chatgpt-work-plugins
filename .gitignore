@@ -1,0 +1,21 @@
+node_modules/
+dist/
+build/
+coverage/
+*.log
+*.pyc
+__pycache__/
+.pytest_cache/
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Aki MCP runtime data and credentials
+.aki/
+oauth-client.json
+oauth-dcr-clients.json
+passphrase.txt
+tokens.json
+
+# Upstream Aki documentation/marketing screenshots are intentionally not vendored.

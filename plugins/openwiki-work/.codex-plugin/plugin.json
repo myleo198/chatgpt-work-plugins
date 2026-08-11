@@ -1,0 +1,21 @@
+{
+  "name": "openwiki-work",
+  "version": "0.1.0",
+  "description": "Build, update, and query OpenWiki knowledge bases from repositories and connected sources.",
+  "author": {"name": "myleo198", "url": "https://github.com/myleo198"},
+  "homepage": "https://github.com/langchain-ai/openwiki",
+  "repository": "https://github.com/myleo198/chatgpt-work-plugins",
+  "license": "MIT",
+  "keywords": ["openwiki", "wiki", "knowledge", "repository", "documentation"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "OpenWiki Work",
+    "shortDescription": "Build and query living knowledge wikis",
+    "longDescription": "Operate OpenWiki for code or personal knowledge, configure sources safely, update generated pages, and query the resulting wiki with traceable provenance.",
+    "developerName": "myleo198",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write", "Network"],
+    "websiteURL": "https://github.com/langchain-ai/openwiki",
+    "defaultPrompt": ["Create an OpenWiki for this repository.", "Update this project wiki from its configured sources."]
+  }
+}

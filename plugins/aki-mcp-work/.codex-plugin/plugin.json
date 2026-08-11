@@ -1,0 +1,21 @@
+{
+  "name": "aki-mcp-work",
+  "version": "0.1.0",
+  "description": "Run an OAuth-protected remote MCP server for allowlisted local filesystem, search, and shell access.",
+  "author": {"name": "myleo198", "url": "https://github.com/myleo198"},
+  "homepage": "https://github.com/lacvietanh/aki-mcp-sv",
+  "repository": "https://github.com/myleo198/chatgpt-work-plugins",
+  "license": "MIT",
+  "keywords": ["mcp", "oauth", "tailscale", "filesystem", "shell"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Aki MCP Work",
+    "shortDescription": "Secure remote access to local files and shell",
+    "longDescription": "Install and operate Aki MCP Server with OAuth 2.1, Tailscale Funnel, constrained filesystem roots, and an allowlisted shell for ChatGPT Work.",
+    "developerName": "myleo198",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write", "Local execution", "Network"],
+    "websiteURL": "https://github.com/lacvietanh/aki-mcp-sv",
+    "defaultPrompt": ["Set up Aki MCP Server for ChatGPT Work safely.", "Audit my Aki MCP roots and shell allowlist."]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "ix-work",
+  "version": "0.1.0",
+  "description": "Map and query code structure with the Ix CLI and persistent code graph.",
+  "author": {"name": "myleo198", "url": "https://github.com/myleo198"},
+  "homepage": "https://github.com/ix-infrastructure/Ix",
+  "repository": "https://github.com/myleo198/chatgpt-work-plugins",
+  "license": "Apache-2.0",
+  "keywords": ["ix", "codegraph", "impact", "trace", "architecture"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Ix Work",
+    "shortDescription": "Persistent structural map for codebases",
+    "longDescription": "Use Ix to map repositories and answer graph-backed questions about symbols, flows, imports, callers, impact, and code smells.",
+    "developerName": "myleo198",
+    "category": "Productivity",
+    "capabilities": ["Read", "Local execution"],
+    "websiteURL": "https://github.com/ix-infrastructure/Ix",
+    "defaultPrompt": ["Map this repository with Ix and explain its architecture.", "Use Ix to assess the impact of changing this symbol."]
+  }
+}
