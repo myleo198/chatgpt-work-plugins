@@ -17,6 +17,14 @@ Use the upstream OpenWiki CLI and repository conventions. Treat generated wiki p
 6. Review generated pages for missing sources, unsupported claims, broken links, and Mermaid syntax errors.
 7. Report which sources were ingested and which were unavailable.
 
+## Windows launcher troubleshooting
+
+When `openwiki.ps1`, `npm.ps1`, or another local PowerShell launcher fails with
+`running scripts is disabled`, use the dedicated `powershell-openwiki-fix`
+skill before changing any OpenWiki configuration. It diagnoses the effective
+Execution Policy, respects organization-managed policy, and only proposes the
+least-privileged `CurrentUser` fix when appropriate.
+
 ## Connector Rules
 
 - Store only environment-variable names in committed connector configuration.

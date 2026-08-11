@@ -6,7 +6,7 @@ Each plugin preserves its upstream license and records the exact revision used f
 | --- | --- | --- | --- |
 | firecrawl-work | https://github.com/firecrawl/firecrawl | af55c2a050a69c03199c9fff4d49bb4ea5acbc26 | AGPL-3.0 |
 | openwiki-work | https://github.com/langchain-ai/openwiki | 50e897dbff260203afbdaa2d385de99957877e49 | MIT |
-| ponytail | https://github.com/DietrichGebert/ponytail | 2ed6c52c9d7e5e56942508591085fd45dea277d3 | MIT |
+| ponytail-work | https://github.com/DietrichGebert/ponytail | 2ed6c52c9d7e5e56942508591085fd45dea277d3 | MIT |
 | tencentdb-agent-memory-work | https://github.com/TencentCloud/TencentDB-Agent-Memory | 0a568c328ea1aae3f22ed3656e7900da7ea565c1 | MIT |
 | ix-work | https://github.com/ix-infrastructure/Ix | 1292375548fb8f4431ac5afc34c68fe2573434d1 | Apache-2.0 |
 | img2threejs-work | https://github.com/img2threejs/img2threejs | d6673386f89673a58736f8d398dd16ece67874f5 | Apache-2.0 |

@@ -1,6 +1,6 @@
 {
   "name": "openwiki-work",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Build, update, and query OpenWiki knowledge bases from repositories and connected sources.",
   "author": {"name": "myleo198", "url": "https://github.com/myleo198"},
   "homepage": "https://github.com/langchain-ai/openwiki",

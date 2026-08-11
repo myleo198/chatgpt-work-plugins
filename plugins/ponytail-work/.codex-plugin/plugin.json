@@ -1,0 +1,21 @@
+{
+  "name": "ponytail-work",
+  "version": "0.1.0",
+  "description": "Use Ponytail's minimal, evidence-led coding and over-engineering review workflows without downloading a remote plugin.",
+  "author": {"name": "myleo198", "url": "https://github.com/myleo198"},
+  "homepage": "https://github.com/DietrichGebert/ponytail",
+  "repository": "https://github.com/myleo198/chatgpt-work-plugins",
+  "license": "MIT",
+  "keywords": ["ponytail", "minimalism", "yagni", "code-review", "simplify"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Ponytail Work",
+    "shortDescription": "Minimal coding and over-engineering review",
+    "longDescription": "Use the local, pinned Ponytail skills to choose the smallest safe implementation and review code for unnecessary complexity.",
+    "developerName": "myleo198",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write", "Local execution"],
+    "websiteURL": "https://github.com/DietrichGebert/ponytail",
+    "defaultPrompt": ["Review this change for unnecessary complexity.", "Find the smallest safe implementation for this task."]
+  }
+}
