@@ -1,0 +1,21 @@
+{
+  "name": "img2threejs-work",
+  "version": "0.1.0",
+  "description": "Create quality-gated, animation-ready procedural Three.js models from reference images.",
+  "author": {"name": "myleo198", "url": "https://github.com/myleo198"},
+  "homepage": "https://github.com/img2threejs/img2threejs",
+  "repository": "https://github.com/myleo198/chatgpt-work-plugins",
+  "license": "Apache-2.0",
+  "keywords": ["threejs", "3d", "image-to-3d", "procedural", "typescript"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "img2threejs Work",
+    "shortDescription": "Turn reference images into procedural Three.js models",
+    "longDescription": "Build editable, quality-gated Three.js model factories from reference images using a staged specification, render-review, and correction workflow.",
+    "developerName": "myleo198",
+    "category": "Productivity",
+    "capabilities": ["Read", "Write", "Local execution"],
+    "websiteURL": "https://github.com/img2threejs/img2threejs",
+    "defaultPrompt": ["Rebuild this object image as a quality-gated procedural Three.js model.", "Assess this reference image and create an ObjectSculptSpec before generating code."]
+  }
+}

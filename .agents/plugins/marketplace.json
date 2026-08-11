@@ -39,6 +39,12 @@
       "category": "Productivity"
     },
     {
+      "name": "img2threejs-work",
+      "source": {"source": "local", "path": "./plugins/img2threejs-work"},
+      "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
+      "category": "Productivity"
+    },
+    {
       "name": "aki-mcp-work",
       "source": {"source": "local", "path": "./plugins/aki-mcp-work"},
       "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"},
