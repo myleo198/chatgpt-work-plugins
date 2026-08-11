@@ -9,6 +9,8 @@ Operate the bundled Aki MCP Server source. It exposes a Streamable HTTP `/mcp` e
 
 ## Workflow
 
+For a complete Windows deployment procedure, read [references/https-deployment-windows.md](references/https-deployment-windows.md) before changing configuration or starting Funnel.
+
 1. Verify Node.js, Git for Windows or Unix tools where required, and Tailscale availability.
 2. Install dependencies in `server/` with the lockfile-preserving package-manager command.
 3. Start the server from `server/`; record the printed HTTPS MCP URL but never copy secrets into chat or logs.
