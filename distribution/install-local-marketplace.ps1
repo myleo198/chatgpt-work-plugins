@@ -1,5 +1,7 @@
 [CmdletBinding()]
-param()
+param(
+    [switch]$ReplaceExisting
+)
 
 $ErrorActionPreference = 'Stop'
 $repositoryRoot = Split-Path -Parent $PSScriptRoot
@@ -21,8 +23,21 @@ try {
     }
     Write-Host 'Đã đăng ký marketplace cục bộ.'
 } catch {
-    Write-Warning "Không thể thêm mới marketplace: $($_.Exception.Message)"
-    Write-Host 'Nếu marketplace này đã được thêm trước đó, hãy mở một phiên Codex mới và chạy /plugins để kiểm tra.'
+    if (-not $ReplaceExisting) {
+        Write-Warning "Không thể thêm mới marketplace: $($_.Exception.Message)"
+        Write-Host 'Nếu đây là bundle cập nhật, chạy lại script với -ReplaceExisting để chuyển Codex sang thư mục bundle mới.'
+    } else {
+        Write-Host 'Đang thay đăng ký marketplace cũ bằng thư mục bundle mới.'
+        & $codexCommand.Source plugin marketplace remove myleo198-chatgpt-work-plugins
+        if ($LASTEXITCODE -ne 0) {
+            throw "Codex CLI trả về mã $LASTEXITCODE khi gỡ marketplace cũ."
+        }
+        & $codexCommand.Source plugin marketplace add $repositoryRoot
+        if ($LASTEXITCODE -ne 0) {
+            throw "Codex CLI trả về mã $LASTEXITCODE khi thêm marketplace mới."
+        }
+        Write-Host 'Đã chuyển marketplace sang bundle cục bộ mới.'
+    }
 }
 
 & $codexCommand.Source plugin marketplace list

@@ -7,6 +7,21 @@ description: Add a new built-in OpenWiki source connector. Use when a user asks 
 
 OpenWiki connectors are built-in TypeScript modules in the OSS repository. Do not create a plugin marketplace, dynamic connector package, or runtime-loaded untrusted connector. Add normal source files and tests.
 
+## Prefer Custom MCP For Arbitrary Servers
+
+If the knowledge source already exposes a read-only HTTP or stdio MCP server,
+use the built-in `custom-mcp` connector instead of adding a ConnectorId:
+
+- Configure `~/.openwiki/connectors/custom-mcp/config.json` with `enabled`,
+  transport, explicit `allowedTools`, and optional `readOnlyOperations`.
+- Put secrets in `~/.openwiki/.env` and reference them as `${ENV_NAME}` in
+  transport headers or environment.
+- Use the OpenWiki MCP tool surface only after the tools are approved as
+  read-only.
+
+Add a dedicated built-in connector only when provider-specific authentication,
+scoping UI, or deterministic API pulls cannot be expressed with Custom MCP.
+
 ## Required Shape
 
 - Add the connector to src/connectors/types.ts and src/connectors/registry.ts.
@@ -25,6 +40,8 @@ OpenWiki connectors are built-in TypeScript modules in the OSS repository. Do no
 - Use deterministic ingestion code for credentialed external fetching.
 - If wrapping MCP, treat the MCP server as read-only and call only allowlisted read/dump operations from connector config.
 - Do not let untrusted connector manifests instantiate arbitrary commands or arbitrary network endpoints without explicit built-in code review.
+- For `custom-mcp`, require explicit `allowedTools` and/or an MCP read-only hint;
+  never guess that an operation is safe from its name.
 
 ## Ingestion Rules
 

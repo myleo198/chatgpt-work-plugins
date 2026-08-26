@@ -16,7 +16,7 @@ Khôi phục việc chạy các launcher `.ps1` cục bộ, đặc biệt là `o
 - Không dùng `Bypass` hoặc `Unrestricted` làm cấu hình thường trực.
 - Không chạy `Unblock-File` hàng loạt; chỉ bỏ chặn một file đã biết nguồn gốc nếu file đó có `Zone.Identifier`.
 - Không in nội dung `.openwiki\\.env`, API key, access token, refresh token hoặc giá trị biến môi trường bí mật.
-- Không chạy `openwiki code --update` trong bước chẩn đoán; lệnh này có thể ghi lại tài liệu và gọi provider AI.
+- Không chạy `openwiki --update` trong bước chẩn đoán; lệnh này có thể ghi lại tài liệu và gọi provider AI.
 
 ## 1. Thu thập bằng chứng
 
@@ -85,7 +85,7 @@ Sau đó chạy kiểm tra OpenWiki chỉ đọc. Dùng tiến trình con vì la
 $openwikiPs1 = (Get-Command openwiki -CommandType ExternalScript -ErrorAction Stop).Source
 $psi = [System.Diagnostics.ProcessStartInfo]::new()
 $psi.FileName = (Get-Command powershell.exe).Source
-$psi.Arguments = '-NoProfile -File "' + $openwikiPs1 + '" auth'
+$psi.Arguments = '-NoProfile -File "' + $openwikiPs1 + '" --help'
 $psi.UseShellExecute = $false
 $psi.RedirectStandardOutput = $true
 $psi.RedirectStandardError = $true
@@ -105,18 +105,18 @@ $stdout
 if ($stderr) { $stderr }
 ```
 
-Thành công khi mã thoát là `0` và OpenWiki in danh sách provider. Bước này chỉ đọc cấu hình; không khởi động OAuth, không sửa connector và không ghi wiki.
+Thành công khi mã thoát là `0` và OpenWiki in phần trợ giúp. Bước này không khởi động OAuth, không sửa connector và không ghi wiki.
 
 ## 5. Chạy OpenWiki sau khi đã xác minh
 
 Từ thư mục gốc repository, chạy một trong các lệnh sau khi người dùng chủ động muốn tạo/cập nhật tài liệu:
 
 ```powershell
-openwiki code --update --print
+openwiki --update --print
 ```
 
 ```powershell
-openwiki code --init --print
+openwiki --init --print
 ```
 
 Trước khi chạy, chỉ xác nhận sự tồn tại của cấu hình, không hiển thị bí mật:
