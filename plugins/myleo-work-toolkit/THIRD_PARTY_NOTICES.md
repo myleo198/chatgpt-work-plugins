@@ -5,7 +5,7 @@ This skills-only bundle packages or adapts the following open-source skill mater
 | Component | Source | Revision | License |
 | --- | --- | --- | --- |
 | Firecrawl Work | https://github.com/firecrawl/firecrawl | af55c2a050a69c03199c9fff4d49bb4ea5acbc26 | AGPL-3.0 |
-| OpenWiki Work | https://github.com/langchain-ai/openwiki | 27d835cc617019795065ea0b30d9eb23e62b9789 (v0.4.0) | MIT |
+| OpenWiki Work | https://github.com/langchain-ai/openwiki | 5020dbbab6895fa944786abb6bb481b723a6dfb8 (v0.4.3) | MIT |
 | Ponytail | https://github.com/DietrichGebert/ponytail | 2ed6c52c9d7e5e56942508591085fd45dea277d3 | MIT |
 | TencentDB Agent Memory Work | https://github.com/TencentCloud/TencentDB-Agent-Memory | 0a568c328ea1aae3f22ed3656e7900da7ea565c1 | MIT |
 | Ix Work | https://github.com/ix-infrastructure/Ix | 1292375548fb8f4431ac5afc34c68fe2573434d1 | Apache-2.0 |

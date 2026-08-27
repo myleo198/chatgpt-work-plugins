@@ -1,6 +1,6 @@
 {
   "name": "myleo-work-toolkit",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A single skills-only plugin for research, code analysis, knowledge systems, procedural 3D reconstruction, and secure MCP operations.",
   "author": {"name": "myleo198", "url": "https://github.com/myleo198"},
   "homepage": "https://github.com/myleo198/chatgpt-work-plugins",

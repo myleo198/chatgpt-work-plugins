@@ -7,16 +7,17 @@ description: Install, configure, initialize, update, resume, visualize, or troub
 
 Use the upstream OpenWiki CLI and repository conventions. This plugin provides
 the operating guidance; it does not bundle the OpenWiki executable, model
-credentials, or an MCP server. OpenWiki `0.4.0` requires Node.js 22 or newer.
+credentials, or an MCP server. OpenWiki `0.4.3` requires Node.js 22 or newer.
 Treat generated wiki pages as derived artifacts and preserve source
 configuration.
 
 ## Install and integrate with Codex
 
 1. Check the installed CLI first: `openwiki --version` and `openwiki --help`.
-2. If it is missing or is older than the required upstream release, install or
-   upgrade it with the user's normal Node package manager. Do not put a global
-   package install, provider credentials, or generated output into this plugin.
+2. If it is missing or older than `0.4.3`, install or upgrade it with the
+   user's normal Node package manager, for example
+   `npm install --global openwiki@0.4.3`. Do not put a global package install,
+   provider credentials, or generated output into this plugin.
 3. From the target Git repository, install the official project-scoped Codex
    integration:
 
@@ -53,7 +54,10 @@ configuration.
 
    An interrupted code-wiki run can resume by repeating the same command in the
    preserved worktree. Do not delete `openwiki/.run.json`, `.claims/`, indexes,
-   logs, generated provenance, or `.last-update.json` to force progress.
+   logs, generated provenance, or `.last-update.json` to force progress. In
+   `0.4.3`, source drift during a run is finalized at most once; when OpenWiki
+   reports source drift, start a fresh `init` or `update` lifecycle rather than
+   retrying finalization of the invalidated run.
 5. Review generated pages for unsupported claims, broken links, stale diagrams,
    and the intended output language. Current code wikis use OKF v0.2 metadata
    and repository-grounded Claims; preserve user-authored content and let
@@ -84,4 +88,4 @@ least-privileged `CurrentUser` fix when appropriate.
 
 ## Source
 
-Adapted from `langchain-ai/openwiki` `0.4.0`, revision `27d835cc617019795065ea0b30d9eb23e62b9789`, under MIT.
+Adapted from `langchain-ai/openwiki` `0.4.3`, revision `5020dbbab6895fa944786abb6bb481b723a6dfb8`, under MIT.

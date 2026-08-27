@@ -10,12 +10,12 @@ codex plugin marketplace add myleo198/chatgpt-work-plugins --ref main
 
 The marketplace marks its local plugins as `INSTALLED_BY_DEFAULT`; after the marketplace is added, start a new Codex session and use `/plugins` to verify their state. The repository also includes offline transfer launchers in [`distribution/`](distribution/) for a computer where you do not want to use GitHub or Plugin Portal.
 
-The current portable release is [`chatgpt-work-plugins-local-bundle-v0.3.0.zip`](bundles/chatgpt-work-plugins-local-bundle-v0.3.0.zip). It updates OpenWiki to upstream `0.4.0` and includes an explicit local-marketplace replacement command for later bundle upgrades.
+The current portable release is [`chatgpt-work-plugins-local-bundle-v0.4.0.zip`](bundles/chatgpt-work-plugins-local-bundle-v0.4.0.zip). It updates OpenWiki to upstream `0.4.3` and includes an explicit local-marketplace replacement command for later bundle upgrades.
 
 ## Included plugins
 
 - `firecrawl-work`: web search, scraping, crawling, mapping, and extraction workflows.
-- `openwiki-work`: build and query repository or personal knowledge wikis, including the official OpenWiki 0.4 Codex integration and resumable claims-based lifecycle.
+- `openwiki-work`: build and query repository or personal knowledge wikis, including the official OpenWiki 0.4.3 Codex integration and resumable claims-based lifecycle.
 - `ponytail-work`: local, pinned Ponytail skills for minimal implementation and over-engineering review.
 - `tencentdb-agent-memory-work`: deploy and operate TencentDB Agent Memory workflows.
 - `ix-work`: map and query code structure with the Ix CLI and persistent graph.
