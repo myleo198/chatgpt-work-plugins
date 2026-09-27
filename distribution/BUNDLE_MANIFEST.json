@@ -1,12 +1,12 @@
 {
-  "bundle_version": "0.4.0",
+  "bundle_version": "0.5.0",
   "marketplace": "myleo198-chatgpt-work-plugins",
   "purpose": "Portable local marketplace for Codex without Plugin Portal or paid hosting.",
   "upstreams": {
     "openwiki": {
       "repository": "https://github.com/langchain-ai/openwiki",
-      "revision": "5020dbbab6895fa944786abb6bb481b723a6dfb8",
-      "version": "0.4.3"
+      "revision": "7557f9eaad919453ebdcd64b85b06cd54e0b6b8d",
+      "version": "0.6.0"
     }
   },
   "update_command_windows": "powershell -ExecutionPolicy Bypass -File .\\distribution\\install-local-marketplace.ps1 -ReplaceExisting",

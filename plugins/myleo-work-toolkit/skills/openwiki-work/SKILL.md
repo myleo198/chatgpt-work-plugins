@@ -7,9 +7,9 @@ description: Install, configure, initialize, update, resume, visualize, or troub
 
 Use the upstream OpenWiki CLI and repository conventions. This toolkit provides
 operating guidance, not the OpenWiki executable, credentials, or MCP server.
-OpenWiki `0.4.3` requires Node.js 22 or newer. If missing or older, install it
+OpenWiki `0.6.0` requires Node.js 22.22.0 or newer. If missing or older, install it
 with the user's normal Node package manager, for example
-`npm install --global openwiki@0.4.3`.
+`npm install --global openwiki@0.6.0`.
 
 ## Codex integration
 
@@ -43,8 +43,7 @@ in the current session.
 
 4. Repeat the same command to resume an interrupted preserved code-wiki run.
    Never manually edit OpenWiki-managed `.run.json`, `.claims`, indexes, logs,
-   provenance, or `.last-update.json`. In `0.4.3`, source drift during a run is
-   finalized at most once; when OpenWiki reports source drift, start a fresh
+   provenance, or `.last-update.json`. In `0.6.0`, source drift invalidates the plan; when OpenWiki reports source drift, start a fresh
    lifecycle instead of retrying finalization of the invalidated run.
 5. Review generated content for supported claims, valid links, diagrams, and
    output language. Current code wikis use OKF v0.2 and grounded Claims.
@@ -68,4 +67,4 @@ least-privileged `CurrentUser` fix when appropriate.
 
 ## Source
 
-Adapted from `langchain-ai/openwiki` `0.4.3`, revision `5020dbbab6895fa944786abb6bb481b723a6dfb8`, under MIT.
+Adapted from `langchain-ai/openwiki` `0.6.0`, revision `7557f9eaad919453ebdcd64b85b06cd54e0b6b8d`, under MIT.
