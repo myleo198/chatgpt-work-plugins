@@ -1,22 +1,22 @@
 ---
 name: openwiki-work
-description: Install, configure, initialize, update, resume, visualize, or troubleshoot OpenWiki 0.4+ for a code repository or personal knowledge sources. Use for OpenWiki setup, Codex integration, source connectors, generated-wiki lifecycle, documentation refreshes, claims/provenance, and OpenWiki troubleshooting.
+description: Install, configure, initialize, update, resume, visualize, or troubleshoot OpenWiki 0.6.0 for a code repository or personal knowledge sources. Use for OpenWiki setup, Codex integration, source connectors, generated-wiki lifecycle, documentation refreshes, claims/provenance, and OpenWiki troubleshooting.
 ---
 
 # OpenWiki Work
 
 Use the upstream OpenWiki CLI and repository conventions. This plugin provides
 the operating guidance; it does not bundle the OpenWiki executable, model
-credentials, or an MCP server. OpenWiki `0.4.3` requires Node.js 22 or newer.
+credentials, or an MCP server. OpenWiki `0.6.0` requires Node.js 22.22.0 or newer.
 Treat generated wiki pages as derived artifacts and preserve source
 configuration.
 
 ## Install and integrate with Codex
 
 1. Check the installed CLI first: `openwiki --version` and `openwiki --help`.
-2. If it is missing or older than `0.4.3`, install or upgrade it with the
+2. If it is missing or older than `0.6.0`, install or upgrade it with the
    user's normal Node package manager, for example
-   `npm install --global openwiki@0.4.3`. Do not put a global package install,
+   `npm install --global openwiki@0.6.0`. Do not put a global package install,
    provider credentials, or generated output into this plugin.
 3. From the target Git repository, install the official project-scoped Codex
    integration:
@@ -29,9 +29,10 @@ configuration.
    skill under `.agents/skills/openwiki`. Do not edit those generated artifacts
    by hand. Inspect with `openwiki integrations list`; if upstream reports a
    modified installation, preserve it and ask before using `--force`.
-4. The official Codex integration exposes a resumable page-job lifecycle. Use
-   the bundled `openwiki-lifecycle` skill only when those MCP tools are actually
-   available in the session. Otherwise use the CLI commands below.
+4. The official Codex integration exposes retrieval tools and a resumable
+   page-job lifecycle. Use the bundled `openwiki-lifecycle` skill only when
+   those MCP tools are actually available in the session. Otherwise use the
+   CLI commands below.
 
 ## Workflow
 
@@ -55,7 +56,7 @@ configuration.
    An interrupted code-wiki run can resume by repeating the same command in the
    preserved worktree. Do not delete `openwiki/.run.json`, `.claims/`, indexes,
    logs, generated provenance, or `.last-update.json` to force progress. In
-   `0.4.3`, source drift during a run is finalized at most once; when OpenWiki
+   `0.6.0`, source drift invalidates the plan; when OpenWiki
    reports source drift, start a fresh `init` or `update` lifecycle rather than
    retrying finalization of the invalidated run.
 5. Review generated pages for unsupported claims, broken links, stale diagrams,
@@ -88,4 +89,4 @@ least-privileged `CurrentUser` fix when appropriate.
 
 ## Source
 
-Adapted from `langchain-ai/openwiki` `0.4.3`, revision `5020dbbab6895fa944786abb6bb481b723a6dfb8`, under MIT.
+Adapted from `langchain-ai/openwiki` `0.6.0`, revision `7557f9eaad919453ebdcd64b85b06cd54e0b6b8d`, under MIT.

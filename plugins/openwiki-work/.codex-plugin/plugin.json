@@ -11,7 +11,7 @@
   "interface": {
     "displayName": "OpenWiki Work",
     "shortDescription": "Build and query living knowledge wikis",
-    "longDescription": "Operate OpenWiki 0.4.3 for code or personal knowledge, install its official Codex MCP integration safely, resume generated-wiki jobs, and maintain traceable claims/provenance.",
+    "longDescription": "Operate OpenWiki 0.6.0 for code or personal knowledge, install its official Codex MCP integration safely, resume generated-wiki jobs, and maintain traceable claims/provenance.",
     "developerName": "myleo198",
     "category": "Productivity",
     "capabilities": ["Read", "Write", "Network"],
